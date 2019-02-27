@@ -1,0 +1,42 @@
+<h1>Latest news on Blockchain</h1>
+
+<% articles.forEach(function(data){ %>
+	<h2><%= data["title"] %></h2>
+	<h4><%= data["author"] %></h4>
+	<p><%= data["description"]%></p>
+	<img src="<%= data["urlToImage"] %>" height="100" width="100" >
+<% }) %>
+
+<!--
+<% articles.forEach(function(data){ %>
+	<% if(!data["title"].includes("cryptocurrency")) {%>
+		<h2><%= data["title"] %></h2>
+		<h4><%= data["author"] %></h4>
+		<p><%= data["description"]%></p>
+		<img src="<%= data["urlToImage"] %>" height="100" width="100" >
+	<% } %>
+<% }) %>
+-->
+
+<!--
+<% articles.forEach(function(data){ %>
+
+	<% var search_str = ["blockchain"]; %>
+	<% var result; %>
+	<% search_str.forEach(function(str) { %>
+		<% result = data["title"].search(new RegExp(str)); %>
+
+		
+	<% }) %>
+
+	<% if(result>0) { %>
+
+		<h2><%= data["title"] %></h2>
+		<h4><%= data["author"] %></h4>
+		<p><%= data["description"]%></p>
+		<img src="<%= data["urlToImage"] %>" height="100" width="100" >
+
+	<% } %>
+
+<% }) %>
+-->
